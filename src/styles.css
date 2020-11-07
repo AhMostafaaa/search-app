@@ -2,6 +2,11 @@ ul {
     list-style: none;
 }
 body {
-    overflow: hidden;
     height: 100%;
+}
+.modal-content{
+    border: 2px solid black !important;
+}
+.ngx-pagination .current {
+    background-color: #b3cee5 !important;
 }

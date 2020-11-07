@@ -1,7 +1,33 @@
 section {
     background-color: #b3cee5;
-    height: 100%;
+     height: 100vh;
+     width: 200px;
+     float: left;
 }
 li {
     font-size: 19px;
+}
+ul li i {
+    font-size: 14px;
+}
+.social-text {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+.social ul li {
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+    padding: 0px 8px;
+}
+@media only screen and (max-width: 600px) {
+    section {
+        width: 100%;
+        height: 70vh;
+        float: none;
+    }
 }

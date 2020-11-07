@@ -1,0 +1,110 @@
+section{
+    float: left;
+    width: calc(100% - 200px);
+}
+.main-color {
+    color: #b3cee5;
+}
+.main-border-right {
+    border-right: 1px solid #b3cee5;
+}
+.main-border-bottom {
+    border-bottom: 1px solid #b3cee5;
+}
+.nav-icons i{
+    font-size: 1.33em;
+    cursor: pointer;
+    transition: all .3s;
+}
+.nav-icons i:hover{
+    color:  #b3cee5;
+}
+.nav-icons-text span {
+    font-size: 1.4rem;
+    position: relative;
+}
+.nav-icons-text span:before {
+    position: absolute;
+    display: block;
+    height: 2px;
+    background-color: black;
+    left: 0px;
+    bottom: -5px;
+    content: "";
+    width: 40px;
+}
+.btn-group button {
+    border: 1px solid transparent; 
+    border-radius: 5px;
+    color: black; 
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.btn-group .en {
+    background-color: #b3cee5;
+}
+.btn-group .ar {
+    border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.filters button {
+    background-color: transparent;
+    border: 2px solid #b3cee5;
+    padding: 3px 7px;
+    border-radius: 5px;
+    transition: all .4s;
+    margin-left: 18px;
+}
+.model-filter button {
+    padding: 3px 15px;
+}
+.filters button:hover {
+    background-color: #b3cee5;
+}
+.filters button:hover i {
+    transition: all .4s;
+    color: black;
+}
+/* start table */
+.table-desc {
+    border: 1px solid #b3cee5;
+    border-radius: 5px;
+}
+.table-desc table thead tr th {
+    border-bottom: 3px solid #b3cee5;
+}
+/*End Table */
+/*Start Media Query */
+@media only screen and (max-width: 600px) {
+    section{
+        width: 100%;
+        float: none;
+    }
+    .nav-icons-text span {
+        font-size: 1.3rem;
+    }
+    .nav-icons i {
+        font-size: 1rem !important;
+        margin-right: 8px !important;
+    }
+    .icons {
+        margin-top: 9px;
+    }
+    .btn-group button{
+        font-size: 13px;
+    }
+    .filters button {
+        margin-left: 4px !important;
+        font-size: 13px;
+    }
+    .filters .fa-chevron-down,.filters .fa-download {
+        margin-left: 3px !important;
+    }
+    .filters .fa-plus {
+        margin-right: 3px !important;
+    }
+    .table-desc table tbody tr td {
+        font-size: 13px;
+    }
+}
+/*End Media Query */
