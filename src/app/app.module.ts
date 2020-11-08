@@ -9,7 +9,8 @@ import {
   HttpClient,
 } from "@angular/common/http";
 import { ModalModule } from "ngx-bootstrap/modal";
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     BrowserModule,
     HttpClientModule,
     ModalModule.forRoot(),
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

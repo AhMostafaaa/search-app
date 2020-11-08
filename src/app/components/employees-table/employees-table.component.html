@@ -1,3 +1,4 @@
+<!--Start Table Section-->
 <section class="mt-4">
     <div class="container-fluid">
         <div class="nav-icons">
@@ -34,6 +35,22 @@
             <button (click)="openTemplate(template)"><i class="fas fa-plus mr-4 main-color"></i>Add Filter</button>
             <button>Export<i class="fas fa-download ml-4 main-color"></i></button>
         </div>
+        <div class=" mt-4">
+            <div class="row">
+                <div class="col-4">
+                    <input type="text" placeholder="Search by name" class="form-control" [(ngModel)]="firstName"
+                        (input)="searchByName()" />
+                </div>
+                <div class="col-4">
+                    <input type="text" placeholder="Search by Salary" class="form-control" [(ngModel)]="salary"
+                        (input)="searchBySalary()" />
+                </div>
+                <div class="col-4">
+                    <input type="text" placeholder="Search by Hiring Date" class="form-control" [(ngModel)]="HDate"
+                        (input)="searchByDate()" />
+                </div>
+            </div>
+        </div>
         <div class="table-result mt-4">
             <div class="col-12 p-0">
                 <div class="table-desc table-responsive">
@@ -52,13 +69,13 @@
                         </thead>
                         <tbody>
                             <tr
-                                *ngFor="let employee of employeesContainer | paginate: { itemsPerPage: 10, currentPage: p }">
+                                *ngFor="let employee of employeesContainer | paginate: { itemsPerPage: 10, currentPage: page }">
                                 <td class="p-2 main-border-right main-border-bottom text-capitalize">
                                     {{employee.fullName_FL}}</td>
                                 <td class="p-2 main-border-right main-border-bottom text-capitalize">
                                     {{employee.position.name_FL}}</td>
                                 <td class="p-2 main-border-right main-border-bottom text-capitalize">
-                                    {{employee.hiringDate | date}}</td>
+                                    {{employee.hiringDate | date:'yyyy-MM-dd'}}</td>
                                 <td class="p-2 main-border-right main-border-bottom text-capitalize">
                                     {{employee.firstContractingSalary}}</td>
                                 <td class="p-2 text-capitalize main-border-bottom">Terminate Suspend</td>
@@ -69,11 +86,15 @@
                 </div>
             </div>
         </div>
+        <!--Start Pagination-->
         <div class="text-right mt-2">
-            <pagination-controls autoHide="true" (pageChange)="p = $event"></pagination-controls>
+            <pagination-controls autoHide="true" (pageChange)="page = $event"></pagination-controls>
         </div>
+        <!--End Pagination-->
     </div>
 </section>
+<!--End Table Section-->
+<!--Start Model-->
 <ng-template #template>
     <div class="modal-body filters model-filter">
         <div class="mb-4 text-center">
@@ -91,3 +112,4 @@
         </div>
     </div>
 </ng-template>
+<!--End Model-->
